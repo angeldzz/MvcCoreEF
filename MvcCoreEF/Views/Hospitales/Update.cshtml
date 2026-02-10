@@ -1,0 +1,52 @@
+﻿@model Hospital
+
+<h1 class="mb-4">Crear Hospital</h1>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Id Hospital</label>
+                            <input type="text" name="idhospital" value="@Model.IdHospital" readonly class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" name="nombre" class="form-control" value="@Model.Nombre" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Dirección</label>
+                            <input type="text" name="direccion" class="form-control" value="@Model.Direccion" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Teléfono</label>
+                            <input type="text" name="telefono" class="form-control" value="@Model.Telefono" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Camas</label>
+                            <input type="number" name="camas" class="form-control" value="@Model.Camas" />
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a asp-controller="Hospitales"
+                               asp-action="Index"
+                               class="btn btn-secondary">
+                                Cancelar
+                            </a>
+
+                            <button type="submit" class="btn btn-primary">
+                                Editar hospital
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
